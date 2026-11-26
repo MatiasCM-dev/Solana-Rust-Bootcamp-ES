@@ -2,29 +2,44 @@
 //!
 //! Lee primero `tasks/ex02.md`. Reemplaza cada `todo!()` con una implementación.
 
+use crate::ex07::TransferError::ZeroAmount;
+
 /// La comisión base de una transacción, en lamports.
 ///
 /// Solana cobra 5_000 lamports por firma. Esta es solo la comisión base; las
 /// comisiones de prioridad se suman por separado.
 pub fn base_fee(signatures: u64) -> u64 {
-    todo!()
+    signatures *  5_000
 }
 
 /// Suma todos los montos del slice.
 ///
 /// Un slice vacío suma cero.
 pub fn total(amounts: &[u64]) -> u64 {
-    todo!()
+    let mut suma: u64 = 0;
+    for monto in amounts
+    {
+        suma += * monto
+    }
+    suma
 }
 
 /// Cuenta cuántos montos son estrictamente mayores que `threshold`.
 pub fn count_above(amounts: &[u64], threshold: u64) -> usize {
-    todo!()
+    let mut contar = 0;
+    for montos in amounts
+    {
+        if  *montos > threshold
+        {
+            contar += 1;
+        }
+    }
+    contar
 }
 
 /// Nunca transfieras más que el saldo.
 ///
 /// Retorna el monto que realmente se puede transferir.
 pub fn clamp_transfer(amount: u64, balance: u64) -> u64 {
-    todo!()
+    if amount > balance {balance} else {amount}
 }
