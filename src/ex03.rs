@@ -2,7 +2,6 @@
 //!
 //! Lee primero `tasks/ex03.md`. Reemplaza cada `todo!()` con una implementación.
 
-use std::fmt::format;
 
 /// Construye una etiqueta a partir del nombre de un dueño (con ownership).
 ///
@@ -32,5 +31,4 @@ pub fn take_and_return(account: String) -> (String, usize) {
 /// Consume un vector de nombres de cuentas y retorna cuántos había.
 pub fn consume_all(accounts: Vec<String>) -> usize {
     accounts.len()
-    
 }

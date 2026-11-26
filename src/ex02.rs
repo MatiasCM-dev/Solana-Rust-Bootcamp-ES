@@ -2,8 +2,6 @@
 //!
 //! Lee primero `tasks/ex02.md`. Reemplaza cada `todo!()` con una implementación.
 
-use crate::ex07::TransferError::ZeroAmount;
-
 /// La comisión base de una transacción, en lamports.
 ///
 /// Solana cobra 5_000 lamports por firma. Esta es solo la comisión base; las
